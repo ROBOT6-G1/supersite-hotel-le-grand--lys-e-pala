@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Grand Élysée Palace & Spa - L'incarnation du luxe intemporel et de l'art de vivre à la française</title>
+  <meta name="description" content="Hôtel 5 étoiles d'exception niché au cœur de la capitale, offrant des suites raffinées, une table gastronomique doublement étoilée et un sanctuaire de bien-être sur mesure.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#C5A880',
+            secondary: '#12151A',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans antialiased">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="font-bold text-xl text-primary flex items-center gap-2">
+        <span>✨</span> Le Grand Élysée Palace & Spa
+      </div>
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#hero" class="text-sm font-medium hover:text-primary transition-colors">Accueil</a>
+        <a href="#suites" class="text-sm font-medium hover:text-primary transition-colors">Suites & Tarifs</a>
+        <a href="#experiences" class="text-sm font-medium hover:text-primary transition-colors">Gastronomie & Spa</a>
+        <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">L'Histoire</a>
+        <a href="#testimonials" class="text-sm font-medium hover:text-primary transition-colors">Avis</a>
+        <a href="#reservation" class="text-sm font-medium hover:text-primary transition-colors">Réservation</a>
+      </nav>
+      <a href="#contact" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90 transition">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="py-20 md:py-32 text-center px-4 bg-gradient-to-b from-primary/10 via-transparent to-transparent">
+      <div class="max-w-4xl mx-auto">
+        <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4 border border-primary/20">Palace de Prestige</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">Une parenthèse d'élégance absolue</h1>
+        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">Laissez-vous envoûter par une expérience hôtelière prestigieuse où chaque détail célèbre le raffinement, le confort sur mesure et le service d'excellence.</p>
+        
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#reservation" class="px-6 py-3 bg-primary text-white font-medium rounded-xl shadow-lg shadow-primary/25 hover:opacity-95 transition">Réserver votre séjour</a>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="suites" class="py-16 px-4 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">Suites & Résidences Privées</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm">Un sanctuaire de sérénité et de haute couture</p>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto text-sm mt-2">Découvrez nos appartements et suites d'exception pensés par les plus grands maîtres décorateurs avec vue panoramique sur les monuments emblématiques.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80" alt="Suite Prestige Vendôme" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Suite Prestige Vendôme</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Superficie de 95 m², salon privatif en marbre de Carrare, baignoire îlot balnéo et vue spectaculaire sur la cour d'honneur arborée.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">980 € / nuit</span></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1200&q=80" alt="Suite Royale Panoramique" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Suite Royale Panoramique</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Superficie de 160 m² avec terrasse privée arborée, majordome dédié 24h/24, salle à manger d'apparat et dressing sur mesure.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">2 400 € / nuit</span></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Appartement Penthouse Élysée" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Appartement Penthouse Élysée</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Superficie de 280 m² sur le toit de l'hôtel, jacuzzi extérieur privé, ascenseur sécurisé, cave à vins millésimés et vue à 360°.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">4 800 € / nuit</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiences" class="py-16 px-4 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">Gastronomie & Bien-Être</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm">L'éveil des sens par nos maîtres artisans</p>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto text-sm mt-2">Offrez-vous un voyage sensoriel unique entre haute gastronomie signée par un chef doublement étoilé et rituels de beauté sur mesure.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Restaurant Gastronomique 'L'Ambroisie'" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Restaurant Gastronomique 'L'Ambroisie'</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Une cuisine d'auteur récompensée de deux étoiles au Guide Michelin, sublimant les terroirs français dans un décor de lustres en cristal de Murano.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Menu Dégustation dès 240 €</span></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Spa & Rituels Holistiques" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Spa & Rituels Holistiques</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">1 200 m² dédiés à la régénération : piscine intérieure chauffée à débordement, hammam traditionnel, sauna finlandais et soins personnalisés.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Soin Signature 90 min - 220 €</span></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Bar Lounge & Cave Secrète" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Bar Lounge & Cave Secrète</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Cocktails signatures créés par nos mixologues primés, accompagnés d'une sélection de champagnes rares et de grands crus classés.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Cocktail Création dès 28 €</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 px-4 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">Une Histoire de Passion et d'Excellence</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm">Depuis 1928, le sanctuaire des esthètes</p>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto text-sm mt-2">Bâtie dans la tradition des grands hôtels particuliers parisiens, notre maison conjugue patrimoine historique, conciergerie Clefs d'Or et innovations contemporaines pour offrir un séjour inoubliable.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Service Majordome 24/7" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Service Majordome 24/7</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Une attention discrète et méticuleuse apportée à chacun de vos désirs, de l'arrivée au départ.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Inclus</span></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Transferts Privés en Limousine" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Transferts Privés en Limousine</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Accueil VIP personnalisé dès la descente de l'avion ou de la gare avec flotte de véhicules d'exception.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Sur demande</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-16 px-4 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">Ce Que Disent Nos Hôtes Illustres</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm">Témoignages & Distinctions</p>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto text-sm mt-2">Des moments précieux partagés par notre clientèle internationale exigeante.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Lord Arthur H. – Londres" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Lord Arthur H. – Londres</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Le Grand Élysée Palace redéfinit la notion même de perfection. Le personnel anticipe chaque souhait avec une discrétion exemplaire.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Séjour en Suite Royale</span></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Elena V. – Genève" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Elena V. – Genève</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Le spa et la gastronomie sont absolument transcendants. Un havre de paix d'une sérénité rare en plein cœur de la ville.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Séjour Détox & Gastronomie</span></div>
+        </div>
+        <div class="p-6 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Guillaume de B. – Monaco" class="w-full h-44 object-cover rounded-xl mb-4"/>
+            
+            <h3 class="text-xl font-bold mb-2">Guillaume de B. – Monaco</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">Un sens du détail remarquable et une vue imprenable depuis le Penthouse. C'est indubitablement notre escale favorite à chaque venue.</p>
+          </div>
+          <div class="border-t border-slate-200 dark:border-slate-700 pt-3 mt-2 flex justify-between items-center"><span class="font-extrabold text-primary text-lg">Séjour Penthouse Élysée</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 px-4 max-w-3xl mx-auto">
+      <div class="bg-white dark:bg-slate-800/90 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+        <div class="text-center mb-6">
+          <h2 class="text-3xl font-bold mb-2">Module de Réservation & Conciergerie</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Notre équipe de réservation dédiée est à votre entière disposition pour concevoir un itinéraire sur mesure adapté à vos exigences.</p>
+        </div>
+        <form class="space-y-4 text-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-semibold mb-1">Nom complet</label>
+              <input required type="text" name="name" placeholder="Votre nom" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700"/>
+            </div>
+            <div>
+              <label class="block font-semibold mb-1">Email</label>
+              <input required type="email" name="email" placeholder="votre@email.com" class="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700"/>
+            </div>
+          </div>
+          <div>
+            <label class="block font-semibold mb-1">Message</label>
+            <textarea rows="3" name="message" placeholder="Votre message..." class="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition">Envoyer le message</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="footer" class="py-16 px-4 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3">Le Grand Élysée Palace & Spa Paris</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-sm">Membre officiel des Leading Hotels of the World</p>
+        <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto text-sm mt-2">© 2024 Le Grand Élysée Palace. Tous droits réservés. Mentions Légales | Politique de Confidentialité | Carrières</p>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="font-semibold text-white mb-2">Le Grand Élysée Palace & Spa</p>
+      <p class="text-sm mb-6">Hôtel 5 étoiles d'exception niché au cœur de la capitale, offrant des suites raffinées, une table gastronomique doublement étoilée et un sanctuaire de bien-être sur mesure.</p>
+      <p class="text-xs text-slate-500">© 2026 Le Grand Élysée Palace & Spa. Généré par SUPERSITE IA. Propulsé par Vercel & Supabase Security.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
